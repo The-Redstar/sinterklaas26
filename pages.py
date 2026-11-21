@@ -23,7 +23,7 @@ class Page:
     def __str__(self):
         return "\n".join([
             f"@~----------- BESTAND: {self.num} -------------~@",
-            " "*(len(self.title)//2)+self.title,
+            " "*(21-len(self.title)//2)+self.title,
             "@~--------------------------------------~@",
             "",
             self.content
