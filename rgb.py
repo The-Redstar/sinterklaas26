@@ -7,19 +7,19 @@ LED_COUNT = 3
 LED_PIN = 18
 LED_FREQ_HZ = 800000
 LED_DMA = 10
-LED_BRIGHTNESS = 100  # 0-255
+LED_BRIGHTNESS = 50  # 0-255
 LED_INVERT = False
 LED_CHANNEL = 0
 
 COLORS = {
-    0: Color( 10, 10, 10),
+    0: Color( 20, 20, 20),
     1: Color(255,  0,  0),
     2: Color(  0,255,  0),
-    3: Color(255,255,  0),
+    3: Color(200,200,  0),
     4: Color(  0,  0,255),
-    5: Color(255,  0,255),
-    6: Color(  0,255,255),
-    7: Color(255,255,255),
+    5: Color(200,  0,200),
+    6: Color(  0,200,200),
+    7: Color(150,150,150),
     8: Color(0,0,0),
 }
 
@@ -66,7 +66,7 @@ class RGB:
                 if int(t*1000)%500 < 250:
                     self.strip.setPixelColor(i,BLINKING_COLORS[color])
                 else:
-                    self.strip.setPixelColor(i,COLORS[0])
+                    self.strip.setPixelColor(i,COLORS[OFF])
         self.strip.show()
 
     def set(self,l,m,r):
