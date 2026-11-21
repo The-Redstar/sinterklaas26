@@ -42,6 +42,7 @@ class RGB:
             LED_BRIGHTNESS,
             LED_CHANNEL
         )
+        self.strip.begin()
         self.state = [0,0,0]
 
     def update(self,t=0):
@@ -76,4 +77,4 @@ if __name__=="__main__":
     
     while True:
         rgb.update(time())
-        sleep(50)
+        sleep(0.050)
