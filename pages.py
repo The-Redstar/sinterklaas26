@@ -12,10 +12,10 @@ class Page:
             y,contents = data.split("---",1)
             meta = yaml.safe_load(y)
             self.title = meta["title"].strip().upper()
-            self.contents = contents.strip().upper()
+            self.content = contents.strip().upper()
 
     def contents_raw(self):
-        return self.contents.replace("{","").replace("}","")
+        return self.content.replace("{","").replace("}","")
 
     def accessible(self,permissions):
         return True
