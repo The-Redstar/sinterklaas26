@@ -1,0 +1,41 @@
+title: overzicht hardware
+---
+
+de {pakjesavond-o-maat} heeft een aantal
+aansluitingen, bedieningselementen en
+weergave-elementen. zie onderstaande
+figuur
+
+           C2                          
+   +-------''-------------------------+
+   |         .---.                    |
+   | (X)I1  `\    `                   |
+ .-|       '. \   .'   .-.            |
+ | | (X)I2   \(\)/     |?|            |
+ | |           D       '-'            |
+ | | (X)I3  L1 L2 L3    K             |
+ | |       (X)(X)(X)                  |
+ | | (@)   (@)(@)(@)   [X]    [===]   |
+ ^ |  B4    B1 B2 B3    B5      P     |
+ " +----------------------------------+
+ C1                                                                  
+
+aansluitingen:
+- {C1} aansluiting lichtnet
+- {C2} aansluiting stoomnet
+
+bedieningselementen:
+- drukknoppen {B1-3} met respectievelijk
+  labels {1}, {2} en {4}
+- drukknop {B4} met label {ok}
+- beveiligde drukknop {B5} met lamp
+  en label {5 dec}
+- sleutelgat {K}
+
+weergave-elementen
+- indicatorlampen {I1-3} met
+  respectievelijk de labels {stoomtest},
+  {geheugentest} en {sleuteltest}
+- meerkleurige indicatorlampen {L1-3}
+- wijzer {D}
+- printer {P}

@@ -2,6 +2,8 @@
 import os
 import yaml
 
+FILE_HEADER_START = "@=-----------: BESTAND: {n} :-----------=@"
+FILE_HEADER_END   = "@=--------------------------------------=@"
 
 class Page:
     def __init__(self,num):
@@ -22,9 +24,9 @@ class Page:
 
     def __str__(self):
         return "\n".join([
-            f"@~----------- BESTAND: {self.num} -------------~@",
+            FILE_HEADER_START.format(n=self.num),
             " "*(21-len(self.title)//2)+self.title,
-            "@~--------------------------------------~@",
+            FILE_HEADER_END,
             "",
             self.content
         ])
@@ -34,11 +36,11 @@ class Page:
 
     def str_err(self,err):
         return "\n".join([
-            f"@~----------- BESTAND: {self.num} -------------~@",
+            FILE_HEADER_START.format(n=self.num),
             " "*(len(self.title)//2)+self.title,
             "",
             err,
-            "@~--------------------------------------~@",
+            FILE_HEADER_END,
         ])
         
 
