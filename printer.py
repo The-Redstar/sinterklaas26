@@ -5,7 +5,7 @@ class Printer:
     def __init__(self):
         self.printer = Usb(0x04b8,0x0202)
     def print(self,page):
-        self.printer.println(page.strip())
+        self.printer.textln(page.strip())
         self.printer.cut()
     def print_smart(self,page):
         page=page.strip()
