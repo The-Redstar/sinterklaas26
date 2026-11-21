@@ -81,8 +81,32 @@ if __name__=="__main__":
     from time import time,sleep
 
     rgb = RGB()
-    rgb.set("red",(BLINK,6),(BLINK,0))
-    
+
     while True:
-        rgb.update(time())
-        sleep(0.050)
+        rgb.set(RED,(BLINK,GREEN),(BLINK,BLUE))
+        for i in range(20*10):
+            rgb.update(time())
+            sleep(0.050)
+
+        rgb.set(YELLOW,CYAN,MAGENTA)
+        for i in range(20*10):
+            rgb.update(time())
+            sleep(0.050)
+
+        
+        rgb.set(RED,WHITE,BLACK)
+        for i in range(20*10):
+            rgb.update(time())
+            sleep(0.050)
+        rgb.set(RED,GREEN,BLUE)
+        for i in range(20*10):
+            rgb.update(time())
+            sleep(0.050)
+        rgb.set(RED,CYAN,MAGENTA)
+        for i in range(20*10):
+            rgb.update(time())
+            sleep(0.050)
+        rgb.set(RED,YELLOW,WHITE)
+        for i in range(20*10):
+            rgb.update(time())
+            sleep(0.050)
