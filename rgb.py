@@ -12,7 +12,7 @@ LED_INVERT = False
 LED_CHANNEL = 0
 
 COLORS = {
-    0: Color(  0,  0,  0),
+    0: Color( 10, 10, 10),
     1: Color(255,  0,  0),
     2: Color(  0,255,  0),
     3: Color(255,255,  0),
@@ -20,13 +20,21 @@ COLORS = {
     5: Color(255,  0,255),
     6: Color(  0,255,255),
     7: Color(255,255,255),
+    8: Color(0,0,0),
 }
-COLORS["red"]=COLORS[1]
-COLORS["green"]=COLORS[2]
-COLORS["blue"]=COLORS[4]
+
+BLACK=0
+RED=1
+GREEN=2
+BLUE=4
+YELLOW=3
+MAGENTA=5
+CYAN=6
+WHITE=7
+OFF=8
 
 BLINKING_COLORS=COLORS.copy()
-BLINKING_COLORS[0]=Color(50,50,50)
+# BLINKING_COLORS[BLACK]=Color(10,10,10)
 
 SOLID="solid"
 BLINK="blink"
