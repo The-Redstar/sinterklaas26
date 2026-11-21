@@ -4,7 +4,7 @@ title: inhoudsopgave
 {0xx: pakjesavond-o-maat}
   {[000]} start
   {[001]} inhoudsopgave
-  {[004]} private key
+  {[004]} geheime sleutel
   {[06#]} #### ### #
 
 {1xx: handleidingen}
