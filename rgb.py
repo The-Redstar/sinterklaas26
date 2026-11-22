@@ -12,7 +12,7 @@ LED_INVERT = False
 LED_CHANNEL = 0
 
 COLORS = {
-    0: Color( 20, 20, 20),
+    0: Color( 10, 10, 10),
     1: Color(255,  0,  0),
     2: Color(  0,255,  0),
     3: Color(200,200,  0),
