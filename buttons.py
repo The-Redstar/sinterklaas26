@@ -22,7 +22,7 @@ class Buttons:
                 vl=True
                 vh=False
             GPIO.setup(p,GPIO.IN,pull_up_down=GPIO.PUD_UP)
-            self.buttons.append((p,v))
+            self.buttons.append((p,vl,vh))
 
     def get(self):
         res = []
