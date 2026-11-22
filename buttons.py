@@ -36,8 +36,8 @@ class Buttons:
 
 if __name__=="__main__":
     from outputs import *
+    from rgb import *
     import time
-
 
     outputs = Outputs()
     buttons = Buttons(

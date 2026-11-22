@@ -7,19 +7,20 @@ weergave-elementen.
 
 zie onderstaande figuur:
 
-           C2                          
-   +-------''-------------------------+
-   |         .---.                    |
-   | (X)I1  `\    `                   |
- .-|       '. \   .'   .-.            |
- | | (X)I2   \(\)/     |?|            |
- | |           D       '-'            |
- | | (X)I3  L1 L2 L3    K             |
- | |       (X)(X)(X)                  |
- | | (@)   (@)(@)(@)   [X]    [===]   |
- ^ |  B4    B1 B2 B3    B5      P     |
+                         C2            
+   +---------------------''-----------+
+   |     .---.      .-.               |
+ .-|    `\    `     |?|               |
+ | |   '. \   .'    '-'               |
+ | |     \(\)/       K                |
+ | |  (*)  D  (*)     (*)             |
+ | |   I1      I2      I3             |
+ | |       (*)(*)(*)                  |
+ | |        L1 L2 L3                  |
+ | |  (-)  (-)(-)(-)  [_]     [===]   |
+ ^ |   B0   B1 B2 B3   B4       P     |
  " +----------------------------------+
- C1                                                                  
+ C1                                                           
 
 aansluitingen:
 - {C1} aansluiting lichtnet
@@ -28,15 +29,15 @@ aansluitingen:
 bedieningselementen:
 - drukknoppen {B1-3} met respectievelijk
   labels {1}, {2} en {4}
-- drukknop {B4} met label {ok}
+- drukknop {B4} met label {OK}
 - beveiligde drukknop {B5} met lamp
-  en label {5 dec}
+  en label {5 DEC}
 - sleutelgat {K}
 
 weergave-elementen
 - indicatorlampen {I1-3} met
-  respectievelijk de labels {stoomtest},
-  {geheugentest} en {sleuteltest}
+  respectievelijk de labels {STOOM},
+  {GEHEUGEN} en {IDENTIFICATIE}
 - meerkleurige indicatorlampen {L1-3}
 - wijzer {D}
 - printer {P}
