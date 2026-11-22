@@ -32,12 +32,11 @@ MAGENTA=5
 CYAN=6
 WHITE=7
 OFF=8
+BLINK=16
 
 BLINKING_COLORS=COLORS.copy()
 # BLINKING_COLORS[BLACK]=Color(10,10,10)
 
-SOLID="solid"
-BLINK="blink"
 
 class RGB:
     def __init__(self):
@@ -53,20 +52,21 @@ class RGB:
         self.strip.begin()
         self.state = [0,0,0]
 
-    def update(self,t=0):
+    def update(self,blink_on=True):
         for i in range(3):
-            try:
-                mode,color = self.state[i]
-            except:
-                mode = SOLID
-                color = self.state[i]
-            if mode==SOLID:
-                self.strip.setPixelColor(i,COLORS[color])
-            else:
-                if int(t*1000)%500 < 250:
+            blink = False
+            color = self.state[i]
+            if color>=BLINK:
+                color-=BLINK
+                blink=True
+
+            if blink:
+                if blink_on:
                     self.strip.setPixelColor(i,BLINKING_COLORS[color])
                 else:
                     self.strip.setPixelColor(i,COLORS[OFF])
+            else:
+                self.strip.setPixelColor(i,COLORS[color])
         self.strip.show()
 
     def set(self,l,m,r):
@@ -83,7 +83,7 @@ if __name__=="__main__":
     rgb = RGB()
 
     while True:
-        rgb.set(RED,(BLINK,GREEN),(BLINK,BLUE))
+        rgb.set(RED,BLINK+GREEN,BLINK+BLUE)
         for i in range(20*10):
             rgb.update(time())
             sleep(0.050)

@@ -1,24 +1,42 @@
 from gpiozero import AngularServo
-from time import sleep
+from gpiozero.pins.pigpio import PiGPIOFactory
 
-servo = AngularServo(
-    13,
-    min_angle=0,
-    max_angle=180,
-    min_pulse_width=0.0005,
-    max_pulse_width=0.0024
-)
+SERVO_PIN=13
 
-try:
-    while True:
-        servo.angle = 0
-        sleep(2)
+class Dial:
+    def __init__(self):
+        self.factory = PiGPIOFactory()
 
-        servo.angle = 90
-        sleep(1)
+        self.servo = AngularServo(
+            SERVO_PIN,
+            min_angle=0,
+            max_angle=180,
+            min_pulse_width=0.0005,
+            max_pulse_width=0.0024,
+            pin_factory=self.factory
+        )
 
-        servo.angle = 180
-        sleep(1)
+    def set(self,angle):
+        self.angle=angle
+    
+    def exit(self):
+        self.servo.detach()
 
-except KeyboardInterrupt:
-    servo.detach()
+
+if __name__=="__main__":
+    from time import sleep
+
+    dial = Dial()
+
+    try:
+        while True:
+            dial.set(0)
+            sleep(2)
+
+            dial.set(90)
+            sleep(1)
+
+            dial.set(180)
+            sleep(1)
+    except KeyboardInterrupt:
+        dial.exit()
