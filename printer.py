@@ -1,5 +1,7 @@
-
-from escpos.printer import Usb
+try:
+    from escpos.printer import Usb
+except:
+    from dummy import Usb
 
 class Printer:
     def __init__(self):

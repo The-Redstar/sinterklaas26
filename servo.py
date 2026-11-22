@@ -1,14 +1,17 @@
-from gpiozero import AngularServo
-from gpiozero.pins.pigpio import PiGPIOFactory
+try:
+    from gpiozero import AngularServo
+    from gpiozero.pins.pigpio import PiGPIOFactory
+except:
+    from dummy import AngularServo, PiGPIOFactory
 
-SERVO_PIN=13
+from pins import *
 
 class Dial:
     def __init__(self):
         self.factory = PiGPIOFactory()
 
         self.servo = AngularServo(
-            SERVO_PIN,
+            PIN_SERVO,
             min_angle=0,
             max_angle=180,
             min_pulse_width=0.0005,
@@ -17,7 +20,7 @@ class Dial:
         )
 
     def set(self,angle):
-        self.servo.angle=angle
+        self.servo.angle=150-angle*(120/8)
     
     def exit(self):
         self.servo.detach()

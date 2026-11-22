@@ -1,15 +1,16 @@
 
-import RPi.GPIO as GPIO
+try:
+    import RPi.GPIO as GPIO
+except:
+    from dummy import GPIO
 
 from rgb import BLINK, OFF
+from pins import *
 
 ON = 0
 
 GPIO.setmode(GPIO.BCM)
-PIN_I1=21
-PIN_I2=20
-PIN_I3=16
-PIN_B5_I=12
+
 
 class Leds:
     def __init__(self,*pins):

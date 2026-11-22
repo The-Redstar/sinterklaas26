@@ -14,7 +14,7 @@ class Persistent:
     def __init__(self):
         self.fields = {}
         for file in os.listdir(FOLDER):
-            with open(FOLDER+file","r") as fp:
+            with open(FOLDER+file,"r") as fp:
                 val = fp.read()
             self.fields[file]=val
     def set(self,key,val=""):
@@ -25,8 +25,8 @@ class Persistent:
     def remove(self,key):
         key=key.upper()
         try:
-            self.fields.remove(key)
             os.remove(FOLDER+key)
+            del self.fields[key]
         except:
             pass
     def has(self,key):

@@ -1,10 +1,15 @@
 
-from rpi_ws281x import PixelStrip, Color
+try:
+    from rpi_ws281x import PixelStrip, Color
+except:
+    from dummy import PixelStrip, Color
 import time
+
+from pins import *
 
 # LED configuration
 LED_COUNT = 3
-LED_PIN = 18
+LED_PIN = PIN_RGB
 LED_FREQ_HZ = 800000
 LED_DMA = 10
 LED_BRIGHTNESS = 50  # 0-255
@@ -71,6 +76,8 @@ class RGB:
 
     def set(self,l,m,r):
         self.state = [l,m,r]
+    def set_simple(self,l,m,r):
+        self.state = [k if k!=0 else OFF for k in [l,m,r]]
         
 
 

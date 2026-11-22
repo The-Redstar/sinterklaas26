@@ -1,15 +1,10 @@
 
+try:
+    import RPi.GPIO as GPIO
+except:
+    from dummy import GPIO
 
-import RPi.GPIO as GPIO
-
-PIN_B1=3
-PIN_B2=4
-PIN_B3=17
-PIN_B4=2
-PIN_B5=27
-PIN_K=22
-PIN_LO=10
-PIN_HI=9 #inverted
+from pins import *
 
 class Buttons:
     def __init__(self,*buttons):

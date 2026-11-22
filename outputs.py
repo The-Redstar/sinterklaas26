@@ -1,7 +1,8 @@
 
 import rgb
 import servo
-from leds import *
+import leds
+from pins import *
 
 import time
 
@@ -10,8 +11,8 @@ class Outputs:
     def __init__(self):
         self.rgb = rgb.RGB()
         self.dial = servo.Dial()
-        self.leds = Leds(PIN_I1,PIN_I2,PIN_I3)
-        self.button = Leds(PIN_B5_I)
+        self.leds = leds.Leds(PIN_I1,PIN_I2,PIN_I3)
+        self.button = leds.Leds(PIN_B5_I)
 
     def update(self):
         t = time.time()
