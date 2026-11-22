@@ -1,5 +1,6 @@
 
 import RPi.GPIO as GPIO
+
 from rgb import BLINK, OFF
 
 ON = 0
@@ -22,7 +23,11 @@ class Leds:
 
     def update(self,blink_on=True):
         for p,s in zip(self.pins,self.states):
-            if s==ON or (s==BLINK and blink_on):
+            if s is True:
+                GPIO.output(p,GPIO.HIGH)
+            elif s is False:
+                GPIO.output(p,GPIO.LOW)
+            elif s==ON or (s==BLINK and blink_on):
                 GPIO.output(p,GPIO.HIGH)
             else:
                 GPIO.output(p,GPIO.LOW)
