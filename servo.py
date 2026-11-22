@@ -17,7 +17,7 @@ class Dial:
         )
 
     def set(self,angle):
-        self.angle=angle
+        self.servo.angle=angle
     
     def exit(self):
         self.servo.detach()
