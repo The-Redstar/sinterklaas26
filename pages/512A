@@ -1,5 +1,12 @@
 title: pakjesavond
 ---
 het pakjesavond-protocol kan niet worden
-uitgevoerd eer aan {alle} vereisten is
-voldaan.
+uitgevoerd eer is voldaan aan {alle}
+vereisten, te weten:
+
+- de stoomtest ({[5#6]}) is goedgekeurd
+- de geheugentest ([[53#]]) is goedgekeurd
+- de identificatietest (TODO) is
+  goedgekeurd
+
+dit is momenteel niet het geval.

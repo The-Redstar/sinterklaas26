@@ -133,7 +133,7 @@ class Machine:
                     start=time.time(),
                     recorded=[],
                     pressure=0,
-                    samples=steam.gen(),
+                    samples=steam.gen(50),
                     index=0,
                     failed=False,
                     completed=False,
@@ -236,7 +236,7 @@ class Machine:
 
                 duration = time.time() - self.meta.start
                 if (duration>=(len(self.meta.recorded)+1)*12):
-                    target = [7,3,5,0][len(self.meta.recorded)]
+                    target = [7,2,5,0][len(self.meta.recorded)]
                     diff = abs(target-self.meta.pressure)
                     if diff<0.5:
                         self.meta.recorded.append(0)
@@ -296,11 +296,12 @@ class Machine:
                         self.meta.inputs.append(k)
 
                         if self.meta.inputs != self.meta.answer[:len(self.meta.inputs)]:
+                            print("WRONG KEY")
                             self((states.FAILED,pages.MEMORY))
                             return
                         
                         if len(self.meta.inputs)==5: # done
-                            print("WRONG KEY")
+                            print("ACCEPTED")
                             self.persistent.set(MEMORY_COMPLETED)
                             self((states.SUCCEEDED,pages.MEMORY))
                             return
@@ -386,9 +387,11 @@ class Machine:
         self.inp = self.inputs.get()
         ev = self.event_generator.gen(self.inp)
         if len(ev)>1:
-            print(ev)
+            print(ev[:-1])
 
         for e in ev:
+            if self.next_state is not None:
+                break
             self.handler(e)
 
         if self.next_state:
@@ -412,5 +415,6 @@ class Machine:
 
 if __name__=="__main__":
     if DUMMY:
+        COLORS[BLACK] = (80,80,80)
         BLINKING_COLORS[BLACK] = (80,80,80)
     Machine().run()

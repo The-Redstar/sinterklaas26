@@ -1,21 +1,22 @@
 title: inhoudsopgave
 ---
 
-{0xx: pakjesavond-o-maat}
+{0xx: pakjesavond-#-maat}
   {[000]} start
-  {[001]} inhoudsopgave
-  {[004]} geheime sleutel
-  {[06#]} #### ### #
+  {[001]} inhou##opgave
+  {[002]} vrijwaring
+  {[004]} #####me sleut##
+  {[06##} #### ### # ###
 
-{1xx: handleidingen}
+{1xx: hand##idingen}
   {[100]} overzicht hardware
   {[120]} bediening
   {[156]} handleiding geheugentest
 
 {2xx: tests}
   {[237]} geheugentest
-  {[241]} sleuteltest
-  {[266]} stoomtest
+  {[241]} identificatietest
+  {###6]} sto###est
 
 {3#x: #######}
 ### ## ########
@@ -23,15 +24,16 @@ title: inhoudsopgave
 ###
 
 {4xx: documenten}
-  {[404]} ontbrekende bestanden
+  {[404]} zoekgeraakte bestanden
   {[420]} samenstelling pakjeszakken
+  {[456]} handleiding ##### zegt"
 
 {5xx: prot###llen}
   {[504]} voorbereiding pakjesavond
   {[505]} afhandeling getuigen
-  {[512]} pakj###vond
-  {[#37]} pr##ocol geheugentest
-  {[541]} protocol sle##el
+  {[512]} {pakjesavond}
+  {[##7]} pr##ocol geheugentest
+  {####]} protocol #######icatietest
   ##### ### ####
   {[566]} protocol stoomtest
   ## #
@@ -39,7 +41,7 @@ title: inhoudsopgave
 {6xx: rapporten}
   {[605]} incident st#omstoring
   {[#22]} in##dent verloren sleutel
-  {[636]} incident boilerexplosie
+  {[6###} ###ident boi#er#####sie
   {[642]} inci#### vervalste #####test
   {[#44]} incident ve###lste sleutel
   {[650]} incident stoomlek
@@ -52,4 +54,4 @@ title: inhoudsopgave
  ##### ######## ####
   {[777]} hints
 
-TODO: correcte censuur
+TODO: correcte censuur en lijst paginas

@@ -1,0 +1,80 @@
+title: handleiding "piet zegt"
+---
+
+
+bij "piet zegt" moet een code ingetoetst
+worden op knoppen {B1-3}. de code besaat uit
+vijf toetsaanslagen, en kan bepaald worden
+aan de hand van de vijf signalen die
+getoond worden op indicatorlampen L1-3.
+
+de signalen worden gradueel prijsgegeven.
+na elke prefix van de signalen moet een
+prefix van gelijke lengte van de code
+worden ingetoetst. wanneer een incorrectie
+toets wordt ingedrukt, of te lang geen
+toets wordt ingedrukt, worden
+indicatorlampen L1-3 {rood}, en wordt het
+protocol afgesloten. de overgebleven tijd
+wordt getoond op {D}.
+
+de regels hiervoor zijn als volgt:
+- de {eerste toets} hang af van de kleur van
+  het eerste signaal.
+  - is dit {rood}, toets dan {B2}.
+  - is dit {groen}, toets dan {B3}.
+  - is dit {blauw}, toets dan {B1}.
+- de {tweede toets} hangt af van welke
+  indicatorlamp brandt bij het tweede
+  signaal.
+  - is dit {L1}, toets dan {B3}.
+  - is dit {L2}, toets dan {B1}.
+  - is dit {L3}, toets dan {B2}.
+- de {derde toets} hangt af van de
+  indicatorlamp van het {eerste signaal}.
+  - is dit {L1}, toets dan moet bij
+    aangrenzend oplichtende
+    indicatorlampen in het derde signaal
+    de knop in met dezelfde kleur als de
+    {linker} indicatorlamp, en anders de
+    knop met de kleur van de {rechter}
+    indicatorlamp.
+  - is dit {L2}, toets dan moet bij
+    aangrenzend oplichtende
+    indicatorlampen in het derde signaal
+    de knop in met dezelfde kleur als de
+    {rechter} indicatorlamp, en anders de
+    knop met de kleur van de {linker}
+    indicatorlamp.
+  - is dit {L3}, dan moet de knop worden
+    ingedrukt met de kleur dit {niet}
+    {voorkomt} in het derde signaal.
+- de {vierde toets} hangt af van de kleur
+  van het {tweede signaal}.
+  - is dit {rood}, dan moet de toets worden
+    ingedrukt met de kleur die het {meest}
+    voorkomt in het vierde signaal.
+    bij gelijke aantallen wint rood, dan
+    groen, dan blauw.
+  - is dit {groen}, dan moet de toets worden
+    ingedrukt met de kleur die het {minst}
+    voorkomt in het vierde signaal. bij
+    gelijke aantallen wint groen, dan
+    blauw, dan rood.
+  - is dit {blauw}, dan moet de toets worden
+    ingedrukt met de kleur die bij
+    sortering op hoevaak de kleur voorkomt
+    in het vierde signaal in het {midden}
+    belandt. als hier meerdere opties voor
+    zijn, dan wint blauw, dan rood, dan
+    groen.
+- voor de {vijfde toets}, tel per kleur het
+  aantal maal dat die kleur in alle vijf
+  signalen is voorgekomen, en tel hierbij
+  het aantal maal dat de knop van die
+  kleur is voorgekomen in de voorafgaande
+  vier toetsen. neem de kleur die het
+  {meest} voorkomt.
+  - is dit {rood}, toets dan {B3}.
+  - is dit {groen}, toets dan {B2}.
+  - is dit {blauw}, toets dan {B1}.

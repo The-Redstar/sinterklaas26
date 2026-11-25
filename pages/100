@@ -7,20 +7,20 @@ weergave-elementen.
 
 zie onderstaande figuur: TODO controle
 
-                         C2            
-   +---------------------''-----------+
+                       C2            
+   +-------------------''-------------+
    |     .---.      .-.               |
- .-|    `\    `     |?|               |
+ .-|    `\    `    K|?|               |
  | |   '. \   .'    '-'               |
- | |     \(\)/       K                |
- | |  (*)  D  (*)     (*)             |
- | |   I1      I2      I3             |
+ | |     \(\)/        (*)I1           |
+ | |       D          (*)I2           |
+ | |                  (*)I3           |
  | |       (*)(*)(*)                  |
  | |        L1 L2 L3                  |
  | |  (-)  (-)(-)(-)  [_]     [===]   |
- ^ |   B0   B1 B2 B3   B4       P     |
+ ^ |   B4   B1 B2 B3   B5       P     |
  " +----------------------------------+
- C1                                                           
+ C1                                    
 
 aansluitingen:
 - {C1} aansluiting lichtnet
@@ -28,16 +28,17 @@ aansluitingen:
 
 bedieningselementen:
 - drukknoppen {B1-3} met respectievelijk
-  labels {1}, {2} en {4}
+  labels {1}, {2} en {4} in de kleuren
+  rood, groen en blauw
 - drukknop {B4} met label {OK}
 - beveiligde drukknop {B5} met lamp
-  en label {5 DEC}
-- sleutelgat {K}
+  en gulden label {5 DEC}
+- sleutelgat {K} met label {SLEUTEL}
 
-weergave-elementen
+weergave-elementen:
 - indicatorlampen {I1-3} met
   respectievelijk de labels {STOOM},
   {GEHEUGEN} en {IDENTIFICATIE}
 - meerkleurige indicatorlampen {L1-3}
-- wijzer {D}
+- wijzer {D} met label {DRUK/TIJD}
 - printer {P}

@@ -68,14 +68,17 @@ def print_index():
 def check_pages():
     for p in list_pages():
         page=Page(p)
+        print(page.num,page.title)
         if len(page.title)>42-len(""):
-            print(f"Title of {page.num} too long")
+            print(f"  Title of {page.num} too long")
+        if "TODO" in page.content:
+            print(f"  Found TODO in {page.num}")
         for line in page.contents_raw().split("\n"):
             if len(line)>42:
-                print(f"Line in {page.num} too long ({len(line)}): {line}")
+                print(f"  Line in {page.num} too long ({len(line)}): {line}")
             if "\t" in line:
-                print(f"Tab in {page.num} in line {line}")
+                print(f"  Tab in {page.num} in line {line}")
 
 if __name__=="__main__":
-    print_index()
+    #print_index()
     check_pages()

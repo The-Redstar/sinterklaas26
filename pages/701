@@ -1,0 +1,34 @@
+title: notities stoomtest
+---
+de stoomtest is vrij gevoelig. iemand moet
+de meter uitlezen, terwijl iemand anders
+de stoomdruk regelt.
+
+het is in de praktijk gemakkelijker om
+iemand in de stoomaansluiting te laten
+blazen. deze registreert trouwens alleen
+maar lage, normale en hoge druk.
+
+omdat het systeem een beetje lekt, gaat
+de wijzer willekeurig heen en weer. daar
+moet je dus voor corrigeren.
+
+er moeten die waardes bereikt worden: 7,
+2 en 5. elke keer dat de wijzer 0 bereikt,
+wordt de huidige waarde opgeslagen.
+
+de wijzer mag er niet ver naast zitten.
+als de waarde afgerond klopt, is het goed.
+dan verschijnt er een groen lampje.
+
+als de waarde er maximaal 1 naast zit,
+krijg je een waarschuwing (geel lampje).
+daar mag je er maar 1 van hebben!
+
+als je meer dan 1 waarschuwing krijgt, of
+er een keer te ver naast zit, faalt de
+test.
+
+oh, en belangrijk! als de druk boven de 9
+komt, is het te gevaarlijk en wordt de
+test afgebroken.

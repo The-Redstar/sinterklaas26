@@ -1,0 +1,40 @@
+title: notities bestanden opvragen
+---
+
+elke bestand heeft een octaal nummer van
+die cijfers. deze kunnen worden ingevoerd
+met de knoppen "1", "2", "4" en "ok".
+
+eerst moet je naar de paginazoekmodus.
+deze is te herkennen aan het feit dat
+het eerste lampje zacht wit knippert.
+
+als je in een test zit, wacht dan even.
+dan faalt de test en kom je terug op de
+pagina van de test.
+
+als je op een pagina bent druk je op "ok"
+om naar de zoekmodus te gaan.
+
+in de zoekmodus kun je een cijfer
+samenstellen met de drie knoppen "1", "2"
+en "4". deze hebben ook elk een kleur;
+bij het cijfer hoort de kleur die ontstaat
+uit de combinatie van knoppen die je moet
+indrukken. dat is dus
+
+0 (niets): zwart (zacht wit licht)
+1 (1    ): rood
+2 (  2  ): groen
+3 (1+2  ): geel
+4 (    4): blauw
+5 (1  +4): magenta
+6 (  2+4): cyaan
+7 (1+2+4): wit
+
+druk de knoppen voor het cijfer in, en
+druk dan op "ok". het volgende lampje
+begint nu te knipperen.
+
+nadata alle drie de cijfers zijn ingevuld,
+wordt de pagina uitgeprint.
