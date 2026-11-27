@@ -25,6 +25,7 @@ class Outputs:
 
 if __name__=="__main__":
     from rgb import *
+    from leds import *
 
     outputs = Outputs()
     outputs.rgb.set(RED,BLUE+BLINK,GREEN)
