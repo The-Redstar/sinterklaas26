@@ -54,13 +54,13 @@ if __name__=="__main__":
         outputs.leds.set(b4,k,lo and hi)
 
         if lo and hi:
-            outputs.dial.set(90)
+            outputs.dial.set(4)
         elif lo:
-            outputs.dial.set(120)
+            outputs.dial.set(1)
         elif hi:
-            outputs.dial.set(60)
+            outputs.dial.set(7)
         else:
-            outputs.dial.set(90)
+            outputs.dial.set(4)
         
         outputs.update()
         time.sleep(0.05)
