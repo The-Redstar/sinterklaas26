@@ -16,7 +16,7 @@ PIN_B1 = 27
 PIN_B2 = 17
 PIN_B3 = 4
 
-PIN_B4 = 2
+PIN_B4 = 22
 PIN_B5 = 3
 
 PIN_K  = 2
