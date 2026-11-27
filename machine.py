@@ -74,6 +74,7 @@ class Machine:
         match state:
             case states.START:
                 if self.persistent.has(FINAL_COMPLETED):
+                    print("CLEARED")
                     self.persistent.clear()
                 self.output()
                 self.print("000")
