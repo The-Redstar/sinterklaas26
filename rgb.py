@@ -67,11 +67,11 @@ class RGB:
 
             if blink:
                 if blink_on:
-                    self.strip.setPixelColor(i,BLINKING_COLORS[color])
+                    self.strip.setPixelColor(2-i,BLINKING_COLORS[color])
                 else:
-                    self.strip.setPixelColor(i,COLORS[OFF])
+                    self.strip.setPixelColor(2-i,COLORS[OFF])
             else:
-                self.strip.setPixelColor(i,COLORS[color])
+                self.strip.setPixelColor(2-i,COLORS[color])
         self.strip.show()
 
     def set(self,l,m,r):
