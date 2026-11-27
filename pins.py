@@ -1,8 +1,8 @@
 
 # outputs
-PIN_I1    = 16
+PIN_I1    = 21
 PIN_I2    = 20
-PIN_I3    = 21
+PIN_I3    = 16
 
 PIN_B5_I  = 7
 
