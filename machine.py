@@ -73,6 +73,8 @@ class Machine:
 
         match state:
             case states.START:
+                if self.persistent.has(FINAL_COMPLETED):
+                    self.persistent.clear()
                 self.output()
                 self.print("000")
                 self(states.INDEXING)
@@ -85,10 +87,15 @@ class Machine:
 
             # pages
             case (states.PAGE,pages.FINAL):
-                ready = self.persistent.has(STEAM_COMPLETED) and self.persistent.has(MEMORY_COMPLETED) and self.persistent.has(KEY_COMPLETED)
+                ready = (
+                    self.persistent.has(STEAM_COMPLETED) and self.persistent.has(MEMORY_COMPLETED) and self.persistent.has(KEY_COMPLETED)
+                    and not self.persistent.has(FINAL_COMPLETED))
                 self.meta = ready
                 self.handler = self.handle_final
-                if ready:
+                if self.persistent.has(FINAL_COMPLETED):
+                    self.output()
+                    self.print("512C")
+                elif ready:
                     self.output(button=True)
                     self.print("512B")
                 else:
@@ -172,8 +179,9 @@ class Machine:
                 self.print(page+("B",))
             
             case states.FINISHED:
+                self.persistent.set(FINAL_COMPLETED)
                 self.meta = None
-                self.handler = lambda e:None
+                self.handler = handle_page
                 self.output()
                 self.print("FINISHED")
 

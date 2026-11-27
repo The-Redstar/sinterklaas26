@@ -8,6 +8,8 @@ FOLDER = "persistent/"
 STEAM_COMPLETED="STOOMTEST"
 MEMORY_COMPLETED="GEHEUGENTEST"
 KEY_COMPLETED="SLEUTELTEST"
+FINAL_COMPLETED="PAKJESAVOND"
+
 START_TIME="START"
 
 class Persistent:
@@ -33,6 +35,9 @@ class Persistent:
         return key.upper() in self.fields
     def get(self,key):
         return self.fields.get(key.upper())
+    def clear(self):
+        for key in list(self.fields.keys()):
+            self.remove(key)
 
 if __name__=="__main__":
     p=Persistent()
