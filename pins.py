@@ -1,10 +1,10 @@
 
 # outputs
-PIN_I1    = 21
+PIN_I1    = 16
 PIN_I2    = 20
-PIN_I3    = 16
+PIN_I3    = 21
 
-PIN_B5_I  = 12
+PIN_B5_I  = 7
 
 PIN_RGB   = 18
 PIN_SERVO = 13
@@ -12,16 +12,16 @@ PIN_SERVO = 13
 OUTPUT_PINS = [PIN_I1,PIN_I2,PIN_I3,PIN_B5_I]
 
 # inputs
-PIN_B1 = 3
-PIN_B2 = 4
-PIN_B3 = 17
+PIN_B1 = 27
+PIN_B2 = 17
+PIN_B3 = 4
 
 PIN_B4 = 2
-PIN_B5 = 27
+PIN_B5 = 3
 
-PIN_K  = 22
+PIN_K  = 2
 
-PIN_LO = 10
-PIN_HI = 9 #inverted
+PIN_LO = 24
+PIN_HI = 25 #inverted
 
 INPUT_PINS = [PIN_B1,PIN_B2,PIN_B3,PIN_B4,PIN_B5,PIN_K,PIN_LO,PIN_HI]
