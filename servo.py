@@ -20,7 +20,7 @@ class Dial:
         )
 
     def set(self,angle):
-        self.servo.angle=150-angle*(120/8)
+        self.servo.angle=min(180,max(0,150-angle*(120/8)))
     
     def exit(self):
         self.servo.detach()

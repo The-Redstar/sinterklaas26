@@ -28,7 +28,7 @@ if __name__=="__main__":
 
     outputs = Outputs()
     outputs.rgb.set(RED,BLUE+BLINK,GREEN)
-    outputs.dial.set(90)
+    outputs.dial.set(4)
     outputs.leds.set(BLINK,OFF,ON)
     outputs.button.set(ON)
 
