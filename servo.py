@@ -19,8 +19,10 @@ class Dial:
             pin_factory=self.factory
         )
 
-        self.ZERO = 150 # location of 0
-        self.DELTA = 120 # angle between 0 and 8
+        self.ZERO = 148 # location of 0
+        self.DELTA = 132 # angle between 0 and 8
+
+        self.servo.angle = self.ZERO
 
 
     def set(self,val):
